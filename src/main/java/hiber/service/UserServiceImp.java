@@ -12,13 +12,6 @@ import java.util.List;
 @Service
 public class UserServiceImp implements UserService {
 
-//   Мы используем DAO класс, для того, что бы:
-//
-//   1. Что бы не было нагромождений в сервис-классе, не писать тут код реализации взаимодействия
-//   с БД
-//   2. Если у нас несколько сервис классов, то, что бы не писать в каждом реализицию работы с БД,
-//   а просто обратитья в DAO, где это уже реализовано.
-
    @Autowired
    private UserDao userDao;
 
@@ -39,5 +32,4 @@ public class UserServiceImp implements UserService {
    public User getUserByCar(String model, int series) {
       return userDao.getUserByCar(model, series);
    }
-
 }
